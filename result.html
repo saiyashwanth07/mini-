@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan Result - DocuShield AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h2>Scan Result</h2>
+        <h3 class="{{ status|lower }}">{{ status }}</h3>
+
+        {% if filename %}
+            <p><strong>File Scanned:</strong> {{ filename }}</p>
+        {% endif %}
+        {% if confidence %}
+            <p><strong>Confidence:</strong> {{ confidence }}%</p>
+        {% endif %}
+
+        <form action="/" method="get">
+            <button type="submit">Scan Another File</button>
+        </form>
+    </div>
+</body>
+</html>

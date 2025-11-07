@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DocuShield AI - File Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h2>Universal Document Malware Scanner</h2>
+        <form action="/scan" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".pdf,.docx,.pptx,.txt,.xls,.xlsx" required><br>
+            <button type="submit">Scan File</button>
+        </form>
+    </div>
+</body>
+</html>
